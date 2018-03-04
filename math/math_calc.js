@@ -10,6 +10,12 @@ $("[purpose=cuberoot]").click(function(){
 $("[purpose=math_division]").click(function(){
 	window.location.href="divisioncalc.html";
 });
+$("[purpose=scinot]").click(function(){
+   window.location.href="scientific_notation.html";
+});
+$("[purpose=logcal]").click(function(){
+   window.location.href="logcal.html";
+});
 var val=0;
 var val1=0;
 var val2=0;
@@ -41,6 +47,30 @@ $("[purpose=division_dividend]").on("change paste keyup", function() {
    		divisioncalc();
    }
 });
+$("[purpose=sci_num]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   scinot();
+});
+$("[purpose=log_num]").on("change paste keyup", function() {
+   val1=$(this).val(); 
+   logcalc();
+});
+$("[purpose=log_base]").on("change paste keyup", function() {
+   val2=$(this).val(); 
+   logcalc();
+});
+function logcalc()
+{
+   if(val1!="" && val2!="")
+   {
+      $("[purpose=log_val]").val((Math.log(val1)/Math.log(val2)));
+   }
+}
+
+function scinot()
+{
+   $("[purpose=sci_val]").val(parseInt(val).toExponential());
+}
 function divisioncalc()
 {
 	var quo=(val2/val1).toFixed(0);
