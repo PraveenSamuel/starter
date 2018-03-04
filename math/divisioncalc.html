@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../assets/img/logo-fav.png">
-    <title>Pressure converters-Polyconverters</title>
+    <title>Polyconverters</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -31,7 +31,7 @@
         </div>
       </nav>
       <div class="be-left-sidebar">
-        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">Menu</a>
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">Blank Page</a>
           <div class="left-sidebar-spacer">
             <div class="left-sidebar-scroll">
               <div class="left-sidebar-content">
@@ -47,56 +47,45 @@
       <div class="main-content container-fluid">
 
       <div class="row">
-          <div purpose="temp_conv" class="col-md-4 pointer">
-            <div class="panel panel-contrast">
-              <div class="panel-heading panel-heading-contrast">All Temperature calculators<span class="panel-subtitle">Kelvin Celcius Fahren </span></div>
-              <div class="panel-body">
-                
-                <p>In order to calculate all temperature calculators</p>
+            <div class="col-md-12">
+              <div class="panel panel-default panel-border-color panel-border-color-primary">
+                <div class="panel-heading panel-heading-divider">Division Calculator
+                	<span class="panel-subtitle">Division Calculator</span>
+                </div>
+                <div class="panel-body">
+                  <form action="#" style="border-radius: 0px;" class="form-horizontal group-border-dashed">
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Divisor:</label>
+                      <div class="col-sm-6">
+                        <input type="text" purpose="division_divisor" placeholder="Divisor" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Dividend:</label>
+                      <div class="col-sm-6">
+                        <input type="text" purpose="division_dividend" placeholder="Dividend" class="form-control">
+                      </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Remainder</label>
+                      <div class="col-sm-6">
+                        <input type="text" purpose="division_rem" disabled="disabled" placeholder="Remainder" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Quotient</label>
+                      <div class="col-sm-6">
+                        <input type="text" purpose="division_quo" disabled="disabled" placeholder="Quotient" class="form-control">
+                      </div>
+                    </div>
+                    
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-
-          <div purpose="dec_bin" class="col-md-4 pointer">
-            <div class="panel panel-contrast">
-              <div class="panel-heading panel-heading-contrast">Decimal to binary<span class="panel-subtitle">Decimal to binary & Binary to Decimal Calulators</span></div>
-              <div class="panel-body">
-                
-                <p>Decimal to binary</p>
-              </div>
-            </div>
-          </div>
-          <div purpose="speed_conv" class="col-md-4 pointer">
-            <div class="panel panel-contrast">
-              <div class="panel-heading panel-heading-contrast">Speed Conversions<span class="panel-subtitle">Km/hr mph m/s knots ft/s</span></div>
-              <div class="panel-body">
-                
-                <p>Via Via Conversions</p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-        <div class="row">
-          <div purpose="pressure_conv" class="col-md-4 pointer">
-            <div class="panel panel-contrast">
-              <div class="panel-heading panel-heading-contrast">Pressure Conversions<span class="panel-subtitle">bar psi atm Pa</span></div>
-              <div class="panel-body">
-                
-                <p>Via Via Conversions</p>
-              </div>
-            </div>
-          </div>
-          <div purpose="pressure_weight" class="col-md-4 pointer">
-            <div class="panel panel-contrast">
-              <div class="panel-heading panel-heading-contrast">Weight Conversions<span class="panel-subtitle">Kg to g to lb to oz</span></div>
-              <div class="panel-body">
-                
-                <p>Via Via Conversions</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
       
@@ -106,7 +95,7 @@
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../main_menu/menu.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="temp_calc.js" type="text/javascript"></script>
+    <script src="math_calc.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         //initialize the javascript
