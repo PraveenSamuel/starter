@@ -1,6 +1,8 @@
+
 var menu=["Electrical calulator","Light Calulator","Finance Calculator","Converters","Maths","Power Calculator"];
-var icon=["mdi-home","mdi-lamp","mdi-money"];
+var icon=["mdi-flash","mdi-lamp","mdi-money"];
 var href=["index.html","","Finance/menu.html","converters/menu.html","math/menu.html","power/power_conv.html"];
+
 var loc=window.location.href;
 var split=loc.split("/");
 var loc_len=split.length;
