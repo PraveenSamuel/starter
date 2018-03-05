@@ -9,6 +9,8 @@ var hpI;
 var hpM;
 var hpE;
 var BTU;
+var RT;
+var hp;
 
 $("[purpose=mW]").on("change paste keyup", function() {
    mW=$(this).val(); 
@@ -50,6 +52,14 @@ $("[purpose=hpM]").on("change paste keyup", function() {
    hpM=$(this).val(); 
    convert("hpM");
 });
+$("[purpose=hp]").on("change paste keyup", function() {
+   hp=$(this).val(); 
+   convert("hp");
+});
+$("[purpose=RT]").on("change paste keyup", function() {
+   RT=$(this).val(); 
+   convert("RT");
+});
 $("[purpose=BTU]").on("change paste keyup", function() {
    BTU=$(this).val(); 
    convert("BTU");
@@ -67,6 +77,8 @@ function convert(fig) {
 		hpE = (val/746).toFixed(6);
 		hpM = (val/735.49875).toFixed(6);
 		BTU = (3.412141633*val).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=MW]").val(MW);
@@ -77,6 +89,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
 	}
 	if(fig == "dBm"){
 		var val=parseInt(dBm);
@@ -90,6 +104,8 @@ function convert(fig) {
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=W]").val(W);
 		$("[purpose=dBW]").val(dBW);
 		$("[purpose=mW]").val(mW);
@@ -100,6 +116,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
 	}
     if (fig == "kW") {
     	var val = parseInt(kW);
@@ -113,6 +131,8 @@ function convert(fig) {
 		hpI = (W/745.699872).toFixed(6);
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
+		RT = (val/3.5168525).toFixed(6);
+		hp = (val/0.745699872).toFixed(6);
     	$("[purpose=BTU]").val(BTU);
     	$("[purpose=mW]").val(mW);
     	$("[purpose=W]").val(W);
@@ -123,6 +143,8 @@ function convert(fig) {
 		$("[purpose=hpI]").val(hpI);
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
     }
     if(fig == "BTU"){
     	var val = parseInt(BTU);
@@ -136,6 +158,8 @@ function convert(fig) {
 		hpI = (W/745.699872).toFixed(6);
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=MW]").val(MW);
@@ -146,6 +170,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=W]").val(W);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
     }
     if(fig == "GW"){
     	var val = parseInt(GW);
@@ -159,6 +185,8 @@ function convert(fig) {
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
     	$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=MW]").val(MW);
@@ -169,6 +197,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=W]").val(W);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
     }
     if(fig == "dBW"){
     	var val = parseInt(dBW);
@@ -182,6 +212,8 @@ function convert(fig) {
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
     	$("[purpose=W]").val(W);
     	$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
@@ -192,6 +224,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
     }
     if(fig == "mW"){
     	var val = parseInt(mW);
@@ -205,6 +239,8 @@ function convert(fig) {
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=W]").val(W);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=MW]").val(MW);
@@ -215,6 +251,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
     }
     if(fig == "MW"){
     	var val = parseInt(MW);
@@ -228,6 +266,8 @@ function convert(fig) {
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=W]").val(W);
@@ -238,6 +278,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
 	}
 	if(fig == "hpI"){
 		var val = parseInt(hpI);
@@ -251,6 +293,8 @@ function convert(fig) {
 		hpE = (W/746).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=MW]").val(MW);
@@ -261,6 +305,8 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
 	}
     if(fig == "hpE"){
 		var val = parseInt(hpE);
@@ -274,6 +320,8 @@ function convert(fig) {
 		hpI = (W/745.699872).toFixed(6);
 		hpM = (W/735.49875).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=MW]").val(MW);
@@ -284,6 +332,8 @@ function convert(fig) {
 		$("[purpose=W]").val(W);
 		$("[purpose=hpM]").val(hpM);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
 	}
 	if(fig == "hpM"){
 		var val = parseInt(hpM);
@@ -297,6 +347,8 @@ function convert(fig) {
 		hpI = (W/745.699872).toFixed(6);
 		hpE = (W/746).toFixed(6);
 		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
 		$("[purpose=mW]").val(mW);
 		$("[purpose=kW]").val(kW);
 		$("[purpose=MW]").val(MW);
@@ -307,6 +359,62 @@ function convert(fig) {
 		$("[purpose=hpE]").val(hpE);
 		$("[purpose=W]").val(W);
 		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=RT]").val(RT);
+	}
+	if(fig == "hp"){
+		var val = parseInt(hp);
+		kW = (0.745699872 * val).toFixed(6);
+		W = (1000*kW).toFixed(6);
+		mW = (1000*W).toFixed(6);
+		MW = (W/1000000).toFixed(6);
+		GW = (W/1000000000).toFixed(6);
+		dBm = (10*(Math.log10(1000*W/1))).toFixed(6);
+		dBW = (10*(Math.log10(W/1))).toFixed(6);
+		hpI = (W/745.699872).toFixed(6);
+		hpE = (W/746).toFixed(6);
+		hpM = (W/735.49875).toFixed(6);
+		BTU = (3.412141633*W).toFixed(6);
+		RT = (kW/3.5168525).toFixed(6);
+		$("[purpose=mW]").val(mW);
+		$("[purpose=kW]").val(kW);
+		$("[purpose=MW]").val(MW);
+		$("[purpose=GW]").val(GW);
+		$("[purpose=dBm]").val(dBm);
+		$("[purpose=dBW]").val(dBW);
+		$("[purpose=hpI]").val(hpI);
+		$("[purpose=hpE]").val(hpE);
+		$("[purpose=hpM]").val(hpM);
+		$("[purpose=BTU]").val(BTU);
+		$("[purpose=W]").val(W);
+		$("[purpose=RT]").val(RT);
+	}
+	if(fig == "RT"){
+		var val = parseInt(RT);
+		kW = (3.5168525 * val).toFixed(6);
+		W = (1000*kW).toFixed(6);
+        mW = (1000*W).toFixed(6);
+		MW = (W/1000000).toFixed(6);
+		GW = (W/1000000000).toFixed(6);
+		dBm = (10*(Math.log10(1000*W/1))).toFixed(6);
+		dBW = (10*(Math.log10(W/1))).toFixed(6);
+		hpI = (W/745.699872).toFixed(6);
+		hpE = (W/746).toFixed(6);
+		hpM = (W/735.49875).toFixed(6);
+		BTU = (3.412141633*W).toFixed(6);
+		hp = (kW/0.745699872).toFixed(6);
+		$("[purpose=mW]").val(mW);
+		$("[purpose=kW]").val(kW);
+		$("[purpose=MW]").val(MW);
+		$("[purpose=GW]").val(GW);
+		$("[purpose=dBm]").val(dBm);
+		$("[purpose=dBW]").val(dBW);
+		$("[purpose=hpI]").val(hpI);
+		$("[purpose=hpE]").val(hpE);
+		$("[purpose=hpM]").val(hpM);
+		$("[purpose=BTU]").val(BTU);
+		$("[purpose=hp]").val(hp);
+		$("[purpose=W]").val(W);
 	}
 }
 
