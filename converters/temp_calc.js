@@ -22,6 +22,9 @@ $("[purpose=temp_conv]").on("click",function(){
 $("[purpose=dec_bin]").on("click",function(){
 	window.location.href="dec_bin.html";
 });
+$("[purpose=area_conver").on("click",function(){
+	window.location.href="area_conv.html";
+});
 $("[purpose=fahren]").on("change paste keyup", function() {
    fah=$(this).val(); 
    convert("f");
@@ -111,6 +114,63 @@ $("[purpose=weight_ton]").on("change paste keyup", function() {
    val=$(this).val(); 
    weightconversions("ton");
 });
+$("[purpose=meter_sq]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("meter");
+});
+$("[purpose=feet_sq]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("feet");
+});
+$("[purpose=area_hec]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("hec");
+});
+$("[purpose=area_acre]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("acre");
+});
+function areaconversions(fal)
+{
+	if(fal=="acre")
+	{
+		var m_sq=val/0.0002471054;
+		var feet_sq=m_sq*10.7639;
+		var area_hec=m_sq*0.0001;
+		$("[purpose=meter_sq]").val(m_sq);
+		$("[purpose=feet_sq]").val(feet_sq);
+		$("[purpose=area_hec]").val(area_hec);
+	}
+	else if(fal=="hec")
+	{
+		var m_sq=val/0.0001;
+		var feet_sq=m_sq*10.7639;
+		var area_acre=m_sq*0.0002471054;
+		$("[purpose=meter_sq]").val(m_sq);
+		$("[purpose=feet_sq]").val(feet_sq);
+		$("[purpose=area_acre]").val(area_acre);
+	}
+	else if(fal=="feet")
+	{
+		var feet_sq=val;
+		var m_sq=val/10.7639;
+		var area_hec=m_sq*0.0001;
+		var area_acre=m_sq*0.0002471054;
+		$("[purpose=meter_sq]").val(m_sq);
+		$("[purpose=area_hec]").val(area_hec);
+		$("[purpose=area_acre]").val(area_acre);
+	}
+	else if(fal=="meter")
+	{
+		var m_sq=val;
+		var feet_sq=m_sq*10.7639;
+		var area_hec=m_sq*0.0001;
+		var area_acre=m_sq*0.0002471054;
+		$("[purpose=feet_sq]").val(feet_sq);
+		$("[purpose=area_hec]").val(area_hec);
+		$("[purpose=area_acre]").val(area_acre);
+	}
+}
 function weightconversions(fal)
 {
 	if(fal=="ton")
