@@ -22,6 +22,267 @@ $("[purpose=temp_conv]").on("click",function(){
 $("[purpose=dec_bin]").on("click",function(){
 	window.location.href="dec_bin.html";
 });
+$("[purpose=area_conver").on("click",function(){
+	window.location.href="area_conv.html";
+});
+$("[purpose=force_conv").on("click", function() {
+   window.location.href="force_conv.html";
+});
+$("[purpose=force_newton]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("new");
+});
+$("[purpose=force_dyne]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("dyne");
+});
+$("[purpose=force_kilopond]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("kilopond");
+});
+$("[purpose=force_Ounce]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("ounce");
+});
+$("[purpose=force_pound]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("pound");
+});
+$("[purpose=force_kgf]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("force_kgf");
+});
+$("[purpose=force_kip]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("force_kip");
+});
+$("[purpose=force_kN]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("force_kN");
+});
+$("[purpose=force_pdl]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("force_pdl");
+});
+$("[purpose=force_tnf]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   forceconversion("force_tnf");
+});
+function forceconversion(fal)
+{
+	if(fal=="force_tnf")
+	{
+		var force_newton=val/0.00011240447446243;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="force_pdl")
+	{
+		var force_newton=val/7.2330114643232;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="force_kN")
+	{
+		var force_newton=val/0.001;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="force_kip")
+	{
+		var force_newton=val/0.00022480892365534;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="force_kgf")
+	{
+		var force_newton=val/0.10197162129779;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="pound")
+	{
+		var force_newton=val/0.22480892365534;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="ounce")
+	{
+		var force_newton=val/3.5969424550355;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="kilopond")
+	{
+		var force_newton=val/0.10197162129779;
+		var force_dyne=force_newton*100000;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_dyne]").val(force_dyne);
+	}
+	else if(fal=="dyne")
+	{
+		var force_newton=val/100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_newton]").val(force_newton);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+	}
+	else if(fal=="new")
+	{
+		var force_newton=val;
+		var force_dyne=force_newton*100000;
+		var force_kilopond=force_newton*0.10197162129779;
+		var force_Ounce=force_newton*3.5969424550355;
+		var force_pound=force_newton*0.22480892365534;
+		var force_kgf=force_newton*0.10197162129779;
+		var force_kip=force_newton*0.00022480892365534;
+		var force_kN=force_newton*0.001;
+		var force_pdl=force_newton*7.2330114643232;
+		var force_tnf=force_newton*0.00011240447446243;
+		$("[purpose=force_tnf]").val(force_tnf);
+		$("[purpose=force_pdl]").val(force_pdl);
+		$("[purpose=force_kN]").val(force_kN);
+		$("[purpose=force_kip]").val(force_kip);
+		$("[purpose=force_kgf]").val(force_kgf);
+		$("[purpose=force_pound]").val(force_pound);
+		$("[purpose=force_Ounce]").val(force_Ounce);
+		$("[purpose=force_dyne]").val(force_dyne);
+		$("[purpose=force_kilopond]").val(force_kilopond);
+	}
+}
+
 $("[purpose=fahren]").on("change paste keyup", function() {
    fah=$(this).val(); 
    convert("f");
@@ -111,6 +372,63 @@ $("[purpose=weight_ton]").on("change paste keyup", function() {
    val=$(this).val(); 
    weightconversions("ton");
 });
+$("[purpose=meter_sq]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("meter");
+});
+$("[purpose=feet_sq]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("feet");
+});
+$("[purpose=area_hec]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("hec");
+});
+$("[purpose=area_acre]").on("change paste keyup", function() {
+   val=$(this).val(); 
+   areaconversions("acre");
+});
+function areaconversions(fal)
+{
+	if(fal=="acre")
+	{
+		var m_sq=val/0.0002471054;
+		var feet_sq=m_sq*10.7639;
+		var area_hec=m_sq*0.0001;
+		$("[purpose=meter_sq]").val(m_sq);
+		$("[purpose=feet_sq]").val(feet_sq);
+		$("[purpose=area_hec]").val(area_hec);
+	}
+	else if(fal=="hec")
+	{
+		var m_sq=val/0.0001;
+		var feet_sq=m_sq*10.7639;
+		var area_acre=m_sq*0.0002471054;
+		$("[purpose=meter_sq]").val(m_sq);
+		$("[purpose=feet_sq]").val(feet_sq);
+		$("[purpose=area_acre]").val(area_acre);
+	}
+	else if(fal=="feet")
+	{
+		var feet_sq=val;
+		var m_sq=val/10.7639;
+		var area_hec=m_sq*0.0001;
+		var area_acre=m_sq*0.0002471054;
+		$("[purpose=meter_sq]").val(m_sq);
+		$("[purpose=area_hec]").val(area_hec);
+		$("[purpose=area_acre]").val(area_acre);
+	}
+	else if(fal=="meter")
+	{
+		var m_sq=val;
+		var feet_sq=m_sq*10.7639;
+		var area_hec=m_sq*0.0001;
+		var area_acre=m_sq*0.0002471054;
+		$("[purpose=feet_sq]").val(feet_sq);
+		$("[purpose=area_hec]").val(area_hec);
+		$("[purpose=area_acre]").val(area_acre);
+	}
+}
 function weightconversions(fal)
 {
 	if(fal=="ton")
