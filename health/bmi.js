@@ -1,9 +1,3 @@
-$('[purpose="BMI"]').click(function(){
-	window.location.href="bmi_calc.html";
-});
-$('[purpose="calorie"]').click(function(){
-	window.location.href="calorie_calc.html";
-});
 var val=0;
 $("[purpose=bmi_imp_height]").on("change paste keyup", function() {
 	val=$(this).val();
