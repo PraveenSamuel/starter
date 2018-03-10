@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../assets/img/logo-fav.png">
-    <title>Polyconverters</title>
+    <title>CAGR Calculator</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../assets/css/style.css" type="text/css"/>
   </head>
   <body>
-    <div class="be-wrapper">
+    <div class="be-wrapper be-fixed-sidebar">
       <nav class="navbar navbar-default navbar-fixed-top be-top-header">
         <div class="container-fluid">
           <div class="navbar-header"><a href="../index.html" class="navbar-brand"></a>
@@ -31,7 +31,7 @@
         </div>
       </nav>
       <div class="be-left-sidebar">
-        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">Blank Page</a>
+        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">Cagr Calculator</a>
           <div class="left-sidebar-spacer">
             <div class="left-sidebar-scroll">
               <div class="left-sidebar-content">
@@ -50,32 +50,50 @@
             <div class="col-md-12">
               <div class="panel panel-default panel-border-color panel-border-color-primary">
                 <div class="panel-heading panel-heading-divider">CAGR Calculator
-                	<span class="panel-subtitle">Mean Annual growth rate</span>
+                  <span class="panel-subtitle">CAGR Calculator</span>
                 </div>
                 <div class="panel-body">
                   <form action="#" style="border-radius: 0px;" class="form-horizontal group-border-dashed">
                     <div class="form-group">
                       <label class="col-sm-3 control-label">Beginning Value:</label>
                       <div class="col-sm-6">
-                        <input type="text" placeholder="Beginning value" class="form-control">
+                        <input type="text" purpose="beg_val" placeholder="Beginning Value" class="form-control">
                       </div>
                     </div>
+                    
+                    
                     <div class="form-group">
-                      <label class="col-sm-3 control-label">End Value:</label>
+                      <label class="col-sm-3 control-label">Ending Value:</label>
                       <div class="col-sm-6">
-                        <input type="text" placeholder="End value" class="form-control">
+                        <input type="text" purpose="end_val" placeholder="Ending Value" class="form-control">
                       </div>
                     </div>
+
                     <div class="form-group">
-                      <label class="col-sm-3 control-label">Number of Periods</label>
+                      <label class="col-sm-3 control-label">Period:</label>
                       <div class="col-sm-6">
-                        <input type="text" placeholder="Number of periods" class="form-control">
+                        <input type="text" purpose="period_val" placeholder="Period" class="form-control">
                       </div>
                     </div>
+
                     <div class="form-group">
-                      <label class="col-sm-3 control-label">CAGR %</label>
+                      <label class="col-sm-3 control-label">Difference:</label>
                       <div class="col-sm-6">
-                        <input type="text" disabled="disabled" placeholder="%" class="form-control">
+                        <input type="text" disabled purpose="diff" placeholder="Difference" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Growth Rate:</label>
+                      <div class="col-sm-6">
+                        <input type="text" disabled purpose="grow_rate" placeholder="Growth Rate" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label">Total rate:</label>
+                      <div class="col-sm-6">
+                        <input type="text" disabled purpose="total_rate" placeholder="Total Rate" class="form-control">
                       </div>
                     </div>
                     
@@ -94,7 +112,7 @@
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../main_menu/menu.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="finance_calc.js" type="text/javascript"></script>
+    <script src="cagr.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function(){
         //initialize the javascript
