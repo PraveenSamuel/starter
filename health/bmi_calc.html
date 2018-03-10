@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../assets/img/logo-fav.png">
-    <title>Polyconverters</title>
     <title>BMI Calculator</title>
     <link rel="stylesheet" type="text/css" href="../assets/lib/perfect-scrollbar/css/perfect-scrollbar.min.css"/>
     <link rel="stylesheet" type="text/css" href="../assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/><!--[if lt IE 9]>
@@ -32,7 +31,6 @@
         </div>
       </nav>
       <div class="be-left-sidebar">
-        <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">Blank Page</a>
         <div class="left-sidebar-wrapper"><a href="#" class="left-sidebar-toggle">BMI Calculator</a>
           <div class="left-sidebar-spacer">
             <div class="left-sidebar-scroll">
@@ -55,10 +53,7 @@
               <div class="panel panel-default">
                 <div class="panel-heading">BMI Calculator</div>
                 <div class="tab-container">
-                  <ul class="nav nav-tabs">
-                    <li class="active"><a href="#imperial" data-toggle="tab">Imperial</a></li>
-                    <li><a href="#metric" data-toggle="tab">Metric</a></li>
-                  </ul>
+                  
                   <div class="tab-content">
                     <div id="imperial" class="tab-pane active cont">
                       <form action="#" class="form-horizontal group-border-dashed" novalidate="">
@@ -66,14 +61,6 @@
                       <label class="col-sm-3 control-label">Height</label>
                       <div class="col-sm-6">
                         <div class="input-group xs-mb-15">
-                          <input type="text" class="form-control">
-                          <div class="input-group-btn">
-                            <button type="button" id="bmi_imp_hei_drp" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">in <span class="caret"></span></button>
-                            <ul class="dropdown-menu pull-right"> 
-                              <li><a onclick="$('#bmi_imp_hei_drp').html('in');">inches (in)</a></li> 
-                              <li><a onclick="$('#bmi_imp_hei_drp').html('ft');">feet (ft)</a></li>
-                              <li><a onclick="$('#bmi_imp_hei_drp').html('cm');">centimeters (cm)</a></li>
-                              <li><a onclick="$('#bmi_imp_hei_drp').html('m');">meters (m)</a></li> 
                           <input purpose="bmi_imp_height" type="text" class="form-control">
                           <div  class="input-group-btn">
                             <button type="button" id="bmi_imp_hei_drp" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">in <span class="caret"></span></button>
@@ -91,58 +78,6 @@
                       <label class="col-sm-3 control-label">Weight</label>
                       <div class="col-sm-6">
                         <div class="input-group xs-mb-15">
-                          <input type="text" class="form-control">
-                          <div class="input-group-btn">
-                            <button type="button" id="bmi_imp_wei_drp" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">lb <span class="caret"></span></button>
-                            <ul class="dropdown-menu pull-right">
-                              <li><a onclick="$('#bmi_imp_wei_drp').html('lb');">pounds (lb)</a></li>
-                              <li><a onclick="$('#bmi_imp_wei_drp').html('stone');">stones (stone)</a></li> 
-                              <li><a onclick="$('#bmi_imp_wei_drp').html('kg');">kilograms (kg)</a></li> 
-                              <li><a onclick="$('#bmi_imp_wei_drp').html('oz');">ounces (oz)</a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-3 control-label">BMI</label>
-                      <div class="col-sm-6">
-                        <input type="text" disabled="disabled" data-parsley-minlength="6" placeholder="Your BMI is.." class="form-control">
-                      </div>
-                    </div>
-                  </form>
-                  </div>
-                    <div id="metric" class="tab-pane cont">
-                      <form action="#" class="form-horizontal group-border-dashed" novalidate="">
-                    <div class="form-group">
-                      <label class="col-sm-3 control-label">Height</label>
-                      <div class="col-sm-6">
-                        <div class="input-group xs-mb-15">
-                          <input type="text" class="form-control">
-                          <div class="input-group-btn">
-                            <button type="button" id="bmi_met_hei_drp" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">cm <span class="caret"></span></button>
-                            <ul class="dropdown-menu pull-right"> 
-                              <li><a onclick="$('#bmi_met_hei_drp').html('cm');">centimeters (cm)</a></li>
-                              <li><a onclick="$('#bmi_met_hei_drp').html('m');">meters (m)</a></li>
-                              <li><a onclick="$('#bmi_met_hei_drp').html('in');">inches (in)</a></li> 
-                              <li><a onclick="$('#bmi_met_hei_drp').html('ft');">feet (ft)</a></li> 
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                      </div>
-                      <div class="form-group">
-                      <label class="col-sm-3 control-label">Weight</label>
-                      <div class="col-sm-6">
-                        <div class="input-group xs-mb-15">
-                          <input type="text" class="form-control">
-                          <div class="input-group-btn">
-                            <button type="button" id="bmi_met_wei_drp" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">kg <span class="caret"></span></button>
-                            <ul class="dropdown-menu pull-right">
-                              <li><a onclick="$('#bmi_met_wei_drp').html('kg');">kilograms (kg)</a></li>
-                              <li><a onclick="$('#bmi_met_wei_drp').html('lb');">pounds (lb)</a></li>
-                              <li><a onclick="$('#bmi_met_wei_drp').html('stone');">stones (stone)</a></li>  
-                              <li><a onclick="$('#bmi_met_wei_drp').html('oz');">ounces (oz)</a></li>
                           <input type="text" purpose="bmi_imp_weight" class="form-control">
                           <div class="input-group-btn">
                             <button type="button" id="bmi_imp_wei_drp" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">lb <span class="caret"></span></button>
@@ -159,7 +94,6 @@
                     <div class="form-group">
                       <label class="col-sm-3 control-label">BMI</label>
                       <div class="col-sm-6">
-                        <input type="text" disabled="disabled" data-parsley-minlength="6" placeholder="Your BMI is.." class="form-control">
                         <input type="text" purpose="BMI_imp" disabled="disabled" data-parsley-minlength="6" placeholder="Your BMI is.." class="form-control">
                       </div>
                     </div>
@@ -183,7 +117,6 @@
     <script src="../assets/js/main.js" type="text/javascript"></script>
     <script src="../main_menu/menu.js" type="text/javascript"></script>
     <script src="../assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="health_calc.js" type="text/javascript"></script>
      <script src="health_menu.js" type="text/javascript"></script>
     <script src="bmi.js" type="text/javascript"></script>
     <script src="../general.js" type="text/javascript"></script>
