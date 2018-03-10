@@ -1,16 +1,19 @@
 $('[purpose="BMI"]').click(function(){
 	window.location.href="bmi_calc.html";
 });
+$('[purpose="calorie"]').click(function(){
+	window.location.href="calorie_calc.html";
+});
 var val=0;
 $("[purpose=bmi_imp_height]").on("change paste keyup", function() {
 	val=$(this).val();
-	BMIcallBack();
+	BMIImpcallBack();
 });
 $("[purpose=bmi_imp_weight]").on("change paste keyup", function() {
 	val=$(this).val();
-	BMIcallBack();
+	BMIImpcallBack();
 });
-function BMIunitChange(event,id)
+function BMIImpunitChange(event,id)
 {
 	var oldunit=$("#"+id).html().split('<')[0];
 	var hOrW;
@@ -34,9 +37,9 @@ function BMIunitChange(event,id)
 	{
 		$("[purpose=bmi_imp_weight]").val(newvalue);
 	}
-	BMIcallBack();
+	BMIImpcallBack();
 }
-function BMIcallBack()
+function BMIImpcallBack()
 {
 	var weight=$("[purpose=bmi_imp_weight]").val();
 	var height=$("[purpose=bmi_imp_height]").val();
