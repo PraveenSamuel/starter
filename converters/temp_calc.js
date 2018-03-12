@@ -6,14 +6,16 @@ var cen;
 var val;
 var val1;
 var val2;
-$("[purpose=speed_conv").on("click", function() {
+$("[purpose=speed_conv]").on("click", function() {
    window.location.href="speed_conv.html";
 });
-$("[purpose=pressure_weight").on("click", function() {
+$("[purpose=pressure_weight]").on("click", function() {
    window.location.href="weight_calc.html";
 });
-
-$("[purpose=pressure_conv").on("click", function() {
+$('[purpose="length"]').click(function(){
+	window.location.href="length_conv.html";
+});
+$("[purpose=pressure_conv]").on("click", function() {
    window.location.href="pressure_conv.html";
 });
 $("[purpose=temp_conv]").on("click",function(){
@@ -22,10 +24,10 @@ $("[purpose=temp_conv]").on("click",function(){
 $("[purpose=dec_bin]").on("click",function(){
 	window.location.href="dec_bin.html";
 });
-$("[purpose=area_conver").on("click",function(){
+$("[purpose=area_conver]").on("click",function(){
 	window.location.href="area_conv.html";
 });
-$("[purpose=force_conv").on("click", function() {
+$("[purpose=force_conv]").on("click", function() {
    window.location.href="force_conv.html";
 });
 $("[purpose=force_newton]").on("change paste keyup", function() {
