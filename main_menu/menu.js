@@ -1,7 +1,7 @@
 
-var menu=["Electrical calulator","Light Calulator","Finance Calculator","Converters","Maths","Power Calculator","Health Calculator"];
+var menu=["Electrical calulator","Light Calulator","Finance Calculator","Converters","Maths","Health Calculator"];
 var icon=["mdi-flash","mdi-lamp","mdi-money"];
-var href=["index.html","","Finance/menu.html","converters/menu.html","math/menu.html","power/power_conv.html","health/menu.html"];
+var href=["index.html","","Finance/menu.html","converters/menu.html","math/menu.html","health/menu.html"];
 
 var loc=window.location.href;
 var split=loc.split("/");

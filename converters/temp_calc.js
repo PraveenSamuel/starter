@@ -12,8 +12,11 @@ $("[purpose=speed_conv]").on("click", function() {
 $("[purpose=pressure_weight]").on("click", function() {
    window.location.href="weight_calc.html";
 });
-$('[purpose="length"]').click(function(){
+$('[purpose="length_conv"]').click(function(){
 	window.location.href="length_conv.html";
+});
+$('[purpose="power_conv"]').click(function(){
+	window.location.href="power_conv.html";
 });
 $("[purpose=pressure_conv]").on("click", function() {
    window.location.href="pressure_conv.html";
